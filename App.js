@@ -1,9 +1,9 @@
-import { SafeAreaView, Text, View } from "react-native";
+import { Text, View } from "react-native";
 import tailwind from "tailwind-rn";
 import { NavigationContainer } from "@react-navigation/native";
 import Homescreen from "./screens/Homescreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { SafeAreaContext } from "react-native-safe-area-context";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Stack = createNativeStackNavigator();
 
