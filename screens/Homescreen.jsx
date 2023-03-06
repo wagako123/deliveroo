@@ -57,14 +57,14 @@ const Homescreen = () => {
         {/*Tasty discounts */}
         <FeaturedRow
         id='12'
-        title="featured"
-        description="paid placements from our partners"
+        title="Tasty Discounts"
+        description="Everyone's been enjoying juicy discounts"
         featuredCategories="featured"/>
         {/*Offers near you */}
         <FeaturedRow
         id='123'
-        title="featured"
-        description="paid placements from our partners"
+        title="Offers Near you"
+        description="Why not support these restautants in your local area!"
         featuredCategories="featured"/>
       </ScrollView>
     </SafeAreaView>

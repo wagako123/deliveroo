@@ -4,11 +4,11 @@ import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import tailwind from 'tailwind-rn'
 import RestaurantCards from './RestaurantCards'
 
-const FeaturedRow = (id, title, description, )=> {
+const FeaturedRow = ({id, title, description,} )=> {
   return (
     <View>
         <View style={tailwind('mt-4 flex-row items-center justify-between pt-4')}>
-            <Text style={tailwind('font-bold text-lg ')}>title</Text>
+            <Text style={tailwind('font-bold text-lg px-4')}>{title}</Text>
             <ArrowRightIcon color='#00CCBB'/>
       </View>
       <Text style={tailwind('text-xs text-gray-500 px-4')}>{description}</Text>
