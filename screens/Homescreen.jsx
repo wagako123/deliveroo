@@ -5,6 +5,7 @@ import tailwind from "tailwind-rn";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { AdjustmentsHorizontalIcon, AdjustmentsVerticalIcon, ChevronDownIcon, MagnifyingGlassIcon, UserIcon, } from "react-native-heroicons/outline"
 import Categories from '../components/Categories';
+import FeaturedRow from '../components/FeaturedRow';
 
 
 
@@ -47,7 +48,24 @@ const Homescreen = () => {
         {/*categories*/}
         <Categories/>
 
-        {/*featured block */}
+        {/*featured  */}
+        <FeaturedRow
+        id='1'
+        title="featured"
+        description="paid placements from our partners"
+        featuredCategories="featured"/>
+        {/*Tasty discounts */}
+        <FeaturedRow
+        id='12'
+        title="featured"
+        description="paid placements from our partners"
+        featuredCategories="featured"/>
+        {/*Offers near you */}
+        <FeaturedRow
+        id='123'
+        title="featured"
+        description="paid placements from our partners"
+        featuredCategories="featured"/>
       </ScrollView>
     </SafeAreaView>
   )
