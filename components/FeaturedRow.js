@@ -1,10 +1,32 @@
 import { View, Text, ScrollView } from 'react-native'
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import { ArrowRightIcon } from 'react-native-heroicons/outline'
 import tailwind from 'tailwind-rn'
 import RestaurantCards from './RestaurantCards'
+{/*import createClient from '../sanity';*/}
 
 const FeaturedRow = ({id, title, description,} )=> {
+  {/*const[restaurants, setRestaurants] =useState([]);
+
+  useEffect(()=>{
+    createClient.fetch(`
+    *[_type == "featured" &&_id== $id]{
+      ...,
+      restaurants[]->{
+        ...,
+        dishes[]->,
+        type->{name}
+
+      },
+    }[0]
+
+    `, {id}).then(data=>{
+      setRestaurants(data?.restaurants);
+    })
+  },[])*/}
+
+  
+
   return (
     <View>
         <View style={tailwind('mt-4 flex-row items-center justify-between pt-4')}>

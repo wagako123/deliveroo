@@ -5,6 +5,7 @@ import Homescreen from "./screens/Homescreen";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { SafeAreaView } from "react-native-safe-area-context";
 
+
 const Stack = createNativeStackNavigator();
 
 

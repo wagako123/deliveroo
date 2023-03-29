@@ -6,8 +6,9 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { AdjustmentsHorizontalIcon, AdjustmentsVerticalIcon, ChevronDownIcon, MagnifyingGlassIcon, UserIcon, } from "react-native-heroicons/outline"
 import Categories from '../components/Categories';
 import FeaturedRow from '../components/FeaturedRow';
-
-
+import createClient from '../sanity';
+{/*import category from '../gold-donkey/schemas/category';
+*/}
 
 
 const Homescreen = () => {
@@ -21,8 +22,8 @@ const Homescreen = () => {
     })
   },[]);
 
- {/* {useEffect(()=>{
-    sanityClient.fetch(`
+  {/*useEffect(()=>{
+    createClient.fetch(`
     *[_type == "featured"]{
       ...,
       restaurants[]->{
@@ -32,6 +33,9 @@ const Homescreen = () => {
     }`)
     .then((data)=> {setFeaturedcategories(data);}); 
   },[])*/}
+
+
+
   return (
     <SafeAreaView style={tailwind('bg-white pt-5')}>
       
@@ -62,24 +66,31 @@ const Homescreen = () => {
         {/*categories*/}
         <Categories/>
 
-        {/*featured  */}
+       {/*{featuredCategories?.map((category) =>(
+           <FeaturedRow
+           key={category._id}
+           id={category._id}
+           title={category.name}
+           description={category.description}
+       />
+       ))}*/}
+       <FeaturedRow
+           id='123'
+           title="featured"
+           description='Paid placements from our partners'
+           />
         <FeaturedRow
-        id='1'
-        title="featured"
-        description="paid placements from our partners"
-        featuredCategories="featured"/>
-        {/*Tasty discounts */}
+           id='1234'
+           title="tasty discounts"
+           description='Everyone is enjoying these juicy discounts'
+           />
         <FeaturedRow
-        id='12'
-        title="Tasty Discounts"
-        description="Everyone's been enjoying juicy discounts"
-        featuredCategories="featured"/>
-        {/*Offers near you */}
-        <FeaturedRow
-        id='123'
-        title="Offers Near you"
-        description="Why not support these restautants in your local area!"
-        featuredCategories="featured"/>
+           id='12345'
+           title="offers near you"
+           description='support these local businesses'
+           />
+        
+       
       </ScrollView>
     </SafeAreaView>
   )
